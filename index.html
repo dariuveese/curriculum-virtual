@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Currículum - Darío Vega</title>
+  <title>Darío Vega - Currículum</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+    html {
+      scroll-behavior: smooth;
     }
+
+    .card:hover {
+      transform: scale(1.02);
+      transition: transform 0.2s ease-in-out;
+    }
+
     .section-title {
       border-bottom: 2px solid #0d6efd;
       margin-bottom: 1rem;
@@ -17,98 +22,148 @@
     }
   </style>
 </head>
-<body>
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Darío Vega</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobremi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formacion">Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <div class="container py-5">
-    <!-- Header -->
-    <div class="text-center mb-4">
-      <h1>Darío Vega</h1>
-      <p class="text-muted">Técnico Superior en Sistemas Informáticos</p>
-      <p>📍 Jerez de la Frontera | 📞 690 64 36 30 | ✉️ vegasanchezdario2004@gmail.com</p>
-    </div>
 
     <!-- Sobre mí -->
-    <div class="mb-4">
-      <h3 class="section-title">Sobre mí</h3>
+    <section id="sobremi" class="mb-5">
+      <h2 class="section-title">Sobre mí</h2>
       <p>
-        Soy una persona responsable, organizada y apasionada por la tecnología. Me adapto fácilmente, aprendo rápido y disfruto resolviendo problemas. Se me da bien trabajar en equipo y siempre mantengo una actitud proactiva. Me interesa especialmente la administración de sistemas, el desarrollo web y la automatización de procesos.
+        Soy una persona responsable, organizada y apasionada por la tecnología. Me adapto fácilmente, aprendo rápido y disfruto resolviendo problemas. Me interesa especialmente la administración de sistemas, el desarrollo web y la automatización de procesos.
       </p>
-    </div>
+    </section>
 
     <!-- Experiencia laboral -->
-    <div class="mb-4">
-      <h3 class="section-title">Experiencia laboral</h3>
+    <section id="experiencia" class="mb-5">
+      <h2 class="section-title">Experiencia laboral</h2>
+      <div class="row g-3">
 
-      <div class="mb-3">
-        <h5>Libnamic – Prácticas de ASIR</h5>
-        <small class="text-muted">Marzo 2025 – Junio 2025</small>
-        <p>
-          Despliegue de aplicaciones web (automatizados y manuales) en entornos productivos y de pruebas. Uso de Kubernetes para la gestión de contenedores con archivos YAML. Mantenimiento de infraestructura basada en contenedores.
-        </p>
-      </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Libnamic</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Mar 2025 – Jun 2025</h6>
+              <p class="card-text">
+                Despliegue de aplicaciones web con Kubernetes y YAML. Mantenimiento de infraestructura de contenedores.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <div class="mb-3">
-        <h5>Urano Film – Asistente de producción</h5>
-        <small class="text-muted">Junio 2023</small>
-        <p>
-          Coordinación de actividades de rodaje, comunicación entre departamentos y mejora del flujo de trabajo en el set.
-        </p>
-      </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Urano Film</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Junio 2023</h6>
+              <p class="card-text">
+                Apoyo en rodaje y comunicación entre departamentos. Optimización del flujo de trabajo en set.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <div>
-        <h5>Dantia Tecnología SL – Prácticas de SMR</h5>
-        <small class="text-muted">Marzo 2022 – Julio 2022</small>
-        <p>
-          Resolución de incidencias de hardware/software, montaje de equipos informáticos y configuración de switches de red.
-        </p>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Dantia Tecnología SL</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Mar 2022 – Jul 2022</h6>
+              <p class="card-text">
+                Incidencias hardware/software, montaje de equipos, y configuración de switches de red.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
 
     <!-- Formación -->
-    <div class="mb-4">
-      <h3 class="section-title">Formación académica</h3>
-      <ul class="list-group">
-        <li class="list-group-item">ASIR – IES Romero Vargas (2023 – 2025)</li>
-        <li class="list-group-item">DAM (1er curso) – IES Almunia (2022 – 2023)</li>
-        <li class="list-group-item">SMR – La Salle Mundo Nuevo (2020 – 2022)</li>
-      </ul>
-    </div>
+    <section id="formacion" class="mb-5">
+      <h2 class="section-title">Formación académica</h2>
+      <div class="row g-3">
+
+        <div class="col-md-4">
+          <div class="card bg-white shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">ASIR</h5>
+              <p class="card-text">IES Romero Vargas (2023 – 2025)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card bg-white shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">DAM (1er curso)</h5>
+              <p class="card-text">IES Almunia (2022 – 2023)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card bg-white shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">SMR</h5>
+              <p class="card-text">La Salle Mundo Nuevo (2020 – 2022)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- Habilidades -->
-    <div class="mb-4">
-      <h3 class="section-title">Habilidades</h3>
+    <section id="habilidades" class="mb-5">
+      <h2 class="section-title">Habilidades</h2>
       <div class="row">
         <div class="col-md-6">
-          <ul>
-            <li>Comunicación y trabajo en equipo</li>
-            <li>Gestión del tiempo</li>
-            <li>Adaptación a nuevas tecnologías</li>
+          <ul class="list-group">
+            <li class="list-group-item">✅ Comunicación y trabajo en equipo</li>
+            <li class="list-group-item">✅ Gestión del tiempo</li>
+            <li class="list-group-item">✅ Adaptación a nuevas tecnologías</li>
           </ul>
         </div>
         <div class="col-md-6">
-          <ul>
-            <li>Desarrollo web</li>
-            <li>Administración de bases de datos</li>
-            <li>Lenguajes de programación</li>
+          <ul class="list-group">
+            <li class="list-group-item">✅ Desarrollo web</li>
+            <li class="list-group-item">✅ Administración de bases de datos</li>
+            <li class="list-group-item">✅ Lenguajes de programación</li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Idiomas -->
-    <div class="mb-4">
-      <h3 class="section-title">Idiomas</h3>
-      <ul>
-        <li>Español — Nativo</li>
-        <li>Inglés — Intermedio</li>
-      </ul>
-    </div>
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2 class="section-title">Contacto</h2>
+      <p><strong>📞 Teléfono:</strong> 690 64 36 30</p>
+      <p><strong>✉️ Email:</strong> vegasanchezdario2004@gmail.com</p>
+      <p><strong>📍 Dirección:</strong> C/ Mariñiguez, Jerez de la Frontera</p>
+      <p><strong>🌐 GitHub Pages:</strong> <a href="https://dariuveese.github.io/curriculum-virtual/" target="_blank">Ver currículum online</a></p>
+    </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-muted mt-5">
-      © 2025 Darío Vega — Hecho con HTML + Bootstrap
-    </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
